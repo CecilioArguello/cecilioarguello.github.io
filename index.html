@@ -38,7 +38,6 @@
         <ul>
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#services">Juegos</a></li>
-          <li><a href="#comentarios">Comentarios</a></li>
           <li><a href="#team">Integrantes</a></li>
         </nav><!-- .navbar -->
 
@@ -194,9 +193,9 @@
   </div>
 </section><!-- Juegos Section -->
 
-<!--formulario seccion-->
-<section id="comentarios" class="comentarios sections-bg">
-<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+
+
+
 
 
 
@@ -241,44 +240,6 @@
 
 
 
-<script>
-//<!-- ======= Opinión Section ======= -->
-  function enviarOpinion() {
-            // Obtén los elementos del formulario
-            var nombreInput = document.getElementById("nombre");
-            var opinionTextarea = document.getElementById("opinion");
-            var anonimoCheckbox = document.getElementById("anonimo");
-
-            // Limpia los campos del formulario
-            nombreInput.value = "";
-            opinionTextarea.value = "";
-            anonimoCheckbox.checked = false;
-
-            // Muestra un mensaje de agradecimiento
-            alert("¡Gracias por tu opinión!");
-        }
-    </script>
-</head>
-<body>
-    <h1>Opiniones</h1>
-
-    <form>
-        <label for="nombre">Nombre (opcional):</label>
-        <input type="text" name="nombre" id="nombre"><br><br>
-
-        <label for="opinion">Opinión:</label>
-        <textarea name="opinion" id="opinion" rows="4" cols="50" required></textarea><br><br>
-
-        <label for="anonimo">Enviar de manera anónima:</label>
-        <input type="checkbox" name="anonimo" id="anonimo"><br><br>
-
-        <input type="button" value="Enviar opinión" onclick="enviarOpinion()">
-    </form>
-
-</section>
-
-
-   
 
 <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
