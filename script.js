@@ -1,5 +1,5 @@
 /* =====================================================
-   CASA MORH
+   CASA MOHR
    JAVASCRIPT PRINCIPAL
 ===================================================== */
 
@@ -255,7 +255,7 @@ sections.forEach((section) => {
 ===================================================== */
 
 console.log(
-    "Casa Morh Interiores - Página cargada correctamente."
+    "Casa Mohr Interiores - Página cargada correctamente."
 );
 
 /* ==================================================
@@ -285,14 +285,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const image = galleryImages[currentIndex];
 
         modalImg.src = image.currentSrc || image.src;
-        modalImg.alt = image.alt || "Imagen Casa Morh";
+        modalImg.alt = image.alt || "Imagen Casa Mohr";
 
         const card = image.closest(".product-card, .project-card");
         const title = card?.querySelector("h3")?.textContent?.trim();
         const projectLabel = card?.querySelector(".project-image span")?.textContent?.trim();
         const number = card?.querySelector(".card-number")?.textContent?.trim();
 
-        modalCaption.textContent = projectLabel || title || (number ? `Casa Morh · ${number}` : "");
+        modalCaption.textContent = projectLabel || title || (number ? `Casa Mohr · ${number}` : "");
     }
 
     function openModal(index) {
