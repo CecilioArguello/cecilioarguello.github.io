@@ -1,0 +1,264 @@
+/* Página de detalle de trabajos */
+.detail-page { padding-top: 99px; }
+
+.detail-hero {
+    padding: 82px 0 58px;
+    background: var(--cream);
+}
+
+.detail-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 42px;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.detail-back:hover { color: var(--taupe); }
+
+.detail-eyebrow {
+    margin-bottom: 17px;
+    color: var(--taupe);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.detail-title {
+    max-width: 760px;
+    margin: 0;
+    color: var(--black);
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 500;
+    letter-spacing: -3px;
+    line-height: 1;
+}
+
+.detail-lead {
+    max-width: 660px;
+    margin: 26px 0 0;
+    color: var(--text-light);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.detail-showcase { padding: 0 0 100px; background: var(--cream); }
+
+.detail-showcase .container {
+    width: min(calc(100% - 48px), 1280px);
+    max-width: none;
+}
+
+.detail-image-wrap {
+    position: relative;
+    height: clamp(340px, 48vw, 510px);
+    overflow: hidden;
+    background: #dedbd7;
+}
+
+.detail-image-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+}
+
+.detail-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+#gallerySlide {
+    width: 100%;
+    height: 100%;
+}
+
+.detail-gallery-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    color: var(--text-light);
+    text-align: center;
+}
+
+.detail-gallery-placeholder i {
+    margin-bottom: 16px;
+    color: var(--taupe);
+    font-size: 34px;
+}
+
+.detail-gallery-placeholder strong {
+    margin-bottom: 8px;
+    color: var(--black);
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.detail-gallery-placeholder span { font-size: 13px; }
+
+.gallery-arrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    display: grid;
+    width: 46px;
+    height: 46px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(5, 5, 5, 0.55);
+    color: var(--white);
+    font-size: 20px;
+    transform: translateY(-50%);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-arrow:hover,
+.gallery-arrow:focus-visible { background: var(--taupe); }
+.gallery-arrow:focus-visible { outline: 2px solid var(--black); outline-offset: 3px; }
+.gallery-arrow-prev { left: 24px; }
+.gallery-arrow-next { right: 24px; }
+
+.gallery-count {
+    position: absolute;
+    z-index: 3;
+    right: 24px;
+    bottom: 24px;
+    padding: 8px 11px;
+    background: rgba(5, 5, 5, 0.62);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.detail-lightbox {
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.92);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+
+.detail-lightbox.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.detail-lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100vh - 70px);
+    object-fit: contain;
+}
+
+.detail-lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    background: rgba(0, 0, 0, 0.25);
+    color: var(--white);
+    font-size: 23px;
+}
+
+.detail-lightbox-close:hover,
+.detail-lightbox-close:focus-visible { background: var(--taupe); }
+
+.detail-body { padding: 105px 0; }
+
+.detail-kicker {
+    margin-bottom: 16px;
+    color: var(--taupe);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.detail-copy h2,
+.detail-tips h2 {
+    margin-bottom: 23px;
+    color: var(--black);
+    font-size: clamp(30px, 3.5vw, 44px);
+    font-weight: 500;
+}
+
+.detail-copy p { color: var(--text-light); font-size: 16px; line-height: 1.85; }
+
+.detail-list {
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border-top: 1px solid var(--border);
+}
+
+.detail-list div {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 20px;
+    padding: 19px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-list dt { color: var(--taupe); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
+.detail-list dd { margin: 0; color: var(--text); font-size: 14px; line-height: 1.5; }
+
+.detail-tips { padding: 90px 0; background: var(--cream); }
+
+.tip-card {
+    height: 100%;
+    padding: 31px;
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.tip-number { display: block; margin-bottom: 22px; color: var(--taupe); font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+.tip-card h3 { margin-bottom: 12px; color: var(--black); font-size: 21px; font-weight: 500; }
+.tip-card p { margin: 0; color: var(--text-light); font-size: 14px; line-height: 1.75; }
+
+.detail-cta { padding: 105px 0; text-align: center; background: var(--dark); }
+.detail-cta h2 { margin-bottom: 17px; color: var(--white); font-size: clamp(33px, 4vw, 52px); font-weight: 500; }
+.detail-cta p { max-width: 600px; margin: 0 auto 30px; color: #c8c8c8; line-height: 1.75; }
+.detail-cta .btn { border-radius: 0; }
+.detail-footer { padding: 35px 0; }
+
+@media (max-width: 768px) {
+    .detail-page { padding-top: 85px; }
+    .detail-hero { padding: 58px 0 40px; }
+    .detail-showcase { padding-bottom: 65px; }
+    .detail-body, .detail-cta { padding: 70px 0; }
+    .detail-tips { padding: 65px 0; }
+    .detail-list div { grid-template-columns: 1fr; gap: 8px; }
+    .detail-image-wrap { height: 360px; }
+    .detail-showcase .container { width: calc(100% - 30px); }
+    .gallery-arrow-prev { left: 14px; }
+    .gallery-arrow-next { right: 14px; }
+    .gallery-count { right: 14px; bottom: 14px; }
+    .detail-lightbox { padding: 20px; }
+    .detail-lightbox img { max-height: calc(100vh - 40px); }
+    .detail-lightbox-close { top: 12px; right: 12px; }
+}

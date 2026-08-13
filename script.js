@@ -96,7 +96,7 @@ revealElements.forEach((element) => {
 });
 
 
-
+/* Las tarjetas aparecen en secuencia para dar una lectura más natural. */
 /* =====================================================
    CERRAR MENÚ MÓVIL AL HACER CLICK
 ===================================================== */
